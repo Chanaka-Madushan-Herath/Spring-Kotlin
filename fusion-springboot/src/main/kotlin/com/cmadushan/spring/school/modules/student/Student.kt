@@ -1,11 +1,9 @@
 package com.cmadushan.spring.school.modules.student
 
 
+import com.cmadushan.spring.school.modules.school.School
 import java.util.*
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 data class Student (
@@ -15,5 +13,8 @@ data class Student (
 
     var firstName : String ?= null,
     var lastName : String ?= null,
-    var email:String ?= null
+    var email:String ?= null,
+
+    @ManyToOne
+    var school:School ?= null
 )

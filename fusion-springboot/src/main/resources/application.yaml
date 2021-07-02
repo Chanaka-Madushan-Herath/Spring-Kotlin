@@ -7,3 +7,6 @@ spring:
     username: pguser
     password: password
     driver-class-name: org.postgresql.Driver
+  data:
+    rest:
+      base-path: /api
